@@ -367,7 +367,8 @@ class Hip(CMakePackage):
                 raise RuntimeError(msg)
 
             if hip_libs_at_top:
-                hip_path = "{0}/hip".format(self.spec.prefix)
+                #hip_path = "{0}/hip".format(self.spec.prefix)
+                hip_path = self.spec.prefix
             else:
                 hip_path = self.spec.prefix
 

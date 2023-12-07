@@ -240,9 +240,9 @@ class Hypre(AutotoolsPackage, CudaPackage, ROCmPackage):
         if "+rocm" in spec:
             rocm_pkgs = ["rocsparse", "rocthrust", "rocprim", "rocrand"]
             rocm_inc = ""
-            for pkg in rocm_pkgs:
-                if "^" + pkg in spec:
-                    rocm_inc += spec[pkg].headers.include_flags + " "
+            #for pkg in rocm_pkgs:
+            #    if "^" + pkg in spec:
+            #        rocm_inc += spec[pkg].headers.include_flags + " "
             configure_args.extend(
                 [
                     "--with-hip",
